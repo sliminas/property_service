@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 3.0.2
+
+Style/Documentation:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
