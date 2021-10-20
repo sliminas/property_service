@@ -14,8 +14,7 @@ class PropertiesController < ApplicationController
   private
 
   def bad_request
-    error = 'You need to provide the parameters "lat", "lng", "property_type" and "marketing_type"
-parameters.'
+    error = 'You need to provide the parameters "lat", "lng", "property_type" and "marketing_type".'
     render status: :bad_request, json: { error: error }
   end
 

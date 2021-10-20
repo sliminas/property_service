@@ -8,8 +8,7 @@ describe 'PropertiesController' do
       get properties_path(lng: 123, marketing_type: 'sell', property_type: 'apartment')
       expect(response.status).to eq 400
 
-      error = 'You need to provide the parameters "lat", "lng", "property_type" and "marketing_type"
-parameters.'
+      error = 'You need to provide the parameters "lat", "lng", "property_type" and "marketing_type".'
       expect(response.body).to eq({ error: error }.to_json)
 
       get properties_path(lat: 123, marketing_type: 'sell', property_type: 'apartment')
