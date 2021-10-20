@@ -15,7 +15,7 @@ class Property < ApplicationRecord
 
   # the gist index on ll_to_earth(lat, lng) can only be used by the cube @> operator but
   # some points in the earth box are further than the specified great circle distance from the location
-  # so a second we need a second check using earth_distance to really get the 5km radius
+  # so we need a second check using earth_distance to really get the 5km radius
   scope :search_within_5km, ->(lat:, lng:, property_type:, marketing_type:) {
     distance = "earth_distance(ll_to_earth(#{lat}, #{lng}), ll_to_earth(lat, lng))"
 
