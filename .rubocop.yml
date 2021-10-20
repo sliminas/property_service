@@ -7,8 +7,15 @@ Style/Documentation:
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
-Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: consistent_comma
-
 Layout/HashAlignment:
   EnforcedColonStyle: table
+
+Metrics/BlockLength:
+  CountAsOne: [ 'array', 'heredoc', 'hash' ]
+  IgnoredMethods:
+    - context
+    - it
+    - describe
+
+Style/Lambda:
+  EnforcedStyle: literal
